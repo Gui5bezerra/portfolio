@@ -47,6 +47,7 @@ main {
 .about-section {
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Adicionado para permitir a quebra de linha */
 }
 
 .about-content {
@@ -67,6 +68,7 @@ main {
 .about-image {
     max-width: 300px;
     text-align: center;
+    margin-top: 20px; /* Adicionado para espaçamento em telas menores */
 }
 
 .about-image img {
@@ -84,6 +86,39 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .nav-buttons {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-buttons a {
+        margin-bottom: 10px;
+    }
+
+    .about-content {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-buttons {
+        align-items: center;
+    }
+
+    .nav-buttons a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
 }
 
 
