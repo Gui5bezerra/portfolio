@@ -54,11 +54,62 @@
             background-color: #04dcf9;
         }
         
-
         img {
             display: block;
-            margin: 0 auto;
-            margin-top: 20px;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .nav-buttons {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .nav-buttons a {
+                margin-bottom: 10px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            footer {
+                position: static;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-buttons {
+                align-items: center;
+            }
+
+            .nav-buttons a {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -73,16 +124,15 @@
     </header>
     <main>
         <h1> 
-            <strong>Guilherme Silva Bezerra</strong>
+            <strong>Guilherme Bezerra</strong>
         </h1>
         <h2>Software Developer</h2>
         <div class="buttons">
             <a href="https://linkedin.com/in/guilhermebezerra1">LinkedIn</a>
             <a href="https://github.com/gui5bezerra">GitHub</a>
         </div>
-        <img src="Imagem.png" alt="Foto do Guilherme Bezerra">
+        <img class="main-image" src="Imagem.png" alt="Foto do Guilherme Bezerra">
     </main>
     <footer>Guilherme Bezerra</footer>
 </body>
 </html>
-
